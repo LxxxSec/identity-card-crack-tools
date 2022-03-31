@@ -118,6 +118,10 @@ if __name__ == "__main__":
         sys.exit()
     if "?" not in args.identity:
         print("[Warning]: 请使用?符号进行占位爆破")
+        sys.exit()
+    if "x" == args.identity[17]:
+        tmparg = args.identity.replace("x", "X")
+        args.identity = tmparg
     if args.identity:
         if args.identity[6:14] == "????????":
             if not args.year:
