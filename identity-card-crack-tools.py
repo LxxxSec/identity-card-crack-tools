@@ -75,13 +75,16 @@ def bruteLast4nums(identity):
     :param identity: 身份证号 字符串形式
     :return: 返回合法身份证号的个数，打印输出合法的身份证号
     """
+    lastChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'X']
     count = 0
-    for i in range(10000):
-        tstr = "{:0>4d}".format(i)
-        tmpidentity = identity.replace("????", tstr)
-        if checkLastNum(tmpidentity):
-            count += 1
-            res.append(tmpidentity)
+    for i in range(1000):
+        tstr = str("{:0>3d}".format(i))
+        for j in lastChar:
+            tmpstr = tstr + j
+            tmpidentity = identity.replace("????", tmpstr)
+            if checkLastNum(tmpidentity):
+                count += 1
+                res.append(tmpidentity)
     global allcount
     allcount = count
     return count

@@ -51,8 +51,8 @@ python3 identity-card-crack-tools.py -i "110101????????1009" -y 2000 -o 1.txt
 python3 identity-card-crack-tools.py -i "11010119000101????" -o 1.txt
 ```
 
-## TODO & BUG
-
-- 不能爆破末尾带`X`的SFZ【BUG】
+## TODO
 
 - 添加指定男女性别功能【TODO】
+- 添加输入姓名自动识别男女爆破SFZ功能【TODO】
+
